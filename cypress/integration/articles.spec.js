@@ -2,6 +2,7 @@
 
 import articles from '../support/pages/articles'
 //const faker = require('faker')
+import Routes from '../support/routes'
 
 context('Publicação', () => {
     //hooks -> momentos antes / depois do teste
@@ -10,9 +11,14 @@ context('Publicação', () => {
 
     //Preparação
     beforeEach(() => {
+        Routes.init()
+        //preciso inicializar as rotas antes de cada teste? não, somente uma vez
+        //o que acontece se eu mudar o apelido de uma rota? Contrato
+
+        //Preparação
         cy.backgroundLogin()
-       // cy.get('a[href*=editor]').click()
-       articles.acessarFormularioDeNovaPublicacao()
+        // cy.get('a[href*=editor]').click()
+        articles.acessarFormularioDeNovaPublicacao()
     });
 
     it('Criar uma nova publicação', () => {
@@ -27,8 +33,23 @@ context('Publicação', () => {
         // //submeter o artigo
         // cy.get('button.btn-primary').click()
         articles.submeterPublicacao()
+        // //verificar se a publicação foi cadastrada com sucesso
+
+        // cy.wait('@POSTArticles').then((postArticlesResponse) => {
+        //     expect(postArticlesResponse.response.statusCode).to.eq(200)
+        // })
+
+        // cy.wait('@GETArticlesTitle').then((postArticlesResponse) => {
+        //     expect(postArticlesResponse.response.statusCode).to.eq(200)
+        // })
+
+        // cy.wait('@GETArticlesTitleComments').then((postArticlesResponse) => {
+        //     expect(postArticlesResponse.response.statusCode).to.eq(200)
+        // })
+
         //Verificação
-        //
+        articles.verificarSeAPublicacaoFoiCriadaComSucesso()
+
 
         // AAA -> Arrange Act Assert
         // PAV -> Preparação Ação Verificação/Validação
