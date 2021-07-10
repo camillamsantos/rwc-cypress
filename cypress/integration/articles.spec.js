@@ -23,34 +23,14 @@ context('Publicação', () => {
 
     it('Criar uma nova publicação', () => {
 
-        // // preencher o formulário do artigo
-
-        // cy.get('input[ng-model*=title]').type('Agilizei Title - Camilla')
-        // cy.get('input[ng-model*=description]').type('Cypress')
-        // cy.get('textarea[ng-model*=body]').type(faker.lorem.paragraph())
-        // cy.get('input[ng-model*=tagField]').type('Cypress')
+        // preencher o formulário do artigo
         articles.preencherFormulario()
-        // //submeter o artigo
-        // cy.get('button.btn-primary').click()
+        //submeter o artigo
         articles.submeterPublicacao()
-        // //verificar se a publicação foi cadastrada com sucesso
-
-        // cy.wait('@POSTArticles').then((postArticlesResponse) => {
-        //     expect(postArticlesResponse.response.statusCode).to.eq(200)
-        // })
-
-        // cy.wait('@GETArticlesTitle').then((postArticlesResponse) => {
-        //     expect(postArticlesResponse.response.statusCode).to.eq(200)
-        // })
-
-        // cy.wait('@GETArticlesTitleComments').then((postArticlesResponse) => {
-        //     expect(postArticlesResponse.response.statusCode).to.eq(200)
-        // })
+        //verificar se a publicação foi cadastrada com sucesso
 
         //Verificação
         articles.verificarSeAPublicacaoFoiCriadaComSucesso()
-
-
         // AAA -> Arrange Act Assert
         // PAV -> Preparação Ação Verificação/Validação
 
