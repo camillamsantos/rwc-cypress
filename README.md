@@ -48,7 +48,7 @@ Projeto desenvolvido para o bootcamp turma 6 agilizei - https://agilizei.com/agi
 Caso deseje visualizar a reprodução dos vídeos após executar os testes em modo headless, basta acessar o diretório cypress/videos. 
 A seguir seguem gifs com testes executados em modo headless via console do VScode. 
 
-  - Testes em modo headless via console do VsCode ![agilizei_bootcamp_desafio2](https://user-images.githubusercontent.com/25454762/100291909-d069f100-2f5d-11eb-80ff-0a06207020ce.gif)
+  - Testes em modo headless via console do VsCode ![agilizei_bootcamp_desafio2]()
   
   - Testes executados no Azure DevOps ![agilizei_bootcamp_desafio2_azure]()
 
