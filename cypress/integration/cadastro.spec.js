@@ -14,3 +14,7 @@ context('Cadastro', () => {
 
     });
 });
+//input[ng-model*=username]
+////input[ng-model*=email]
+//input[ng-model*=password]
+//button.btn-primary
