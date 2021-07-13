@@ -33,7 +33,6 @@ context('Publicação', () => {
         articles.verificarSeAPublicacaoFoiCriadaComSucesso()
         // AAA -> Arrange Act Assert
         // PAV -> Preparação Ação Verificação/Validação
-
     });
 
 });
